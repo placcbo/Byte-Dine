@@ -14,7 +14,7 @@ const Navbar = () =>{
 return (
 <nav className="app__navbar">
 <div className="app__navbar-logo">
-<img src= {images.gericht} alt="app logo" />
+<h1 style={{color:'white'}}>Byte & Dine</h1>
 </div>
 <ul className='app__navbar-links'>
 {["home","about","menu","awards","contact"].map(item => 

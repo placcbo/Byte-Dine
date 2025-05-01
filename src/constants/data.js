@@ -56,27 +56,29 @@ const cocktails = [
   },
 ];
 
-const awards = [
+// Add this to your constants/data.js
+export const awards = [
   {
-    imgUrl: images.award02,
-    title: 'Bib Gourmond',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    imgUrl: 'https://img.icons8.com/color/96/000000/trophy.png',
+    title: 'Best Digital Dining Experience',
+    subtitle: 'Awarded for innovative tech-driven service in 2024.',
   },
   {
-    imgUrl: images.award01,
-    title: 'Rising Star',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    imgUrl: 'https://img.icons8.com/color/96/000000/medal.png',
+    title: 'Customer Choice Award',
+    subtitle: 'Voted top-rated by diners across Nairobi.',
   },
   {
-    imgUrl: images.award05,
-    title: 'AA Hospitality',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    imgUrl: 'https://img.icons8.com/color/96/000000/first-place-ribbon.png',
+    title: 'Best New Restaurant',
+    subtitle: 'Recognized by Nairobi Culinary Association, 2023.',
   },
   {
-    imgUrl: images.award03,
-    title: 'Outstanding Chef',
-    subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
+    imgUrl: 'https://img.icons8.com/color/96/000000/star.png',
+    title: 'Excellence in Service',
+    subtitle: 'Outstanding hospitality and service quality.',
   },
 ];
+
 
 export default { wines, cocktails, awards };

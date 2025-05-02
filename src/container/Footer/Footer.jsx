@@ -44,8 +44,10 @@ const Footer = () => {
     </div>
 
     <div className="footer__copyright">
-      <p className="p__opensans">@{new Date().getFullYear()} Byte & Dine. All Rights reserved.</p>
+    <p className="p__opensans">&copy; {new Date().getFullYear()} Byte & Dine. All rights reserved.</p>
+
     </div>
+
 
   </div>
 )};

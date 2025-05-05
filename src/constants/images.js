@@ -21,8 +21,12 @@ import sign from '../assets/sign.png';
 import quote from '../assets/quote.png';
 import gericht from '../assets/gericht.png';
 import byte from '../assets/byte.png'
+import dining from '../assets/finedining.png'
+import food from '../assets/headerFood.png'
 
 export default {
+  food,
+  dining,
   byte,
   bg,
   chef,

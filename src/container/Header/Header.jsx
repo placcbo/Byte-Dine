@@ -10,13 +10,12 @@ const Header = () => {
     <div className="app__header app__wrapper section__padding" id="home">
       {/* Left: Text Content */}
       <div className="app__wrapper_info">
-        <SubHeading title="Chase the new flavor" />
-        <h1 className="app__header-h1">The Key to Fine Dining</h1>
+        <SubHeading title="Discover the art of flavor" />
+        <h1 className="app__header-h1">Where Taste Becomes an Experience</h1>
         <p className="p__opensans" style={{ margin: "2rem 0" }}>
-          The key to fine dining lies not just in the quality of ingredients or the skill of the chef,
-          but in the seamless fusion of flavors, textures, and presentation. Every dish tells a story
-          of craftsmanship and attention to detail, inviting diners on a culinary journey that delights
-          the senses and leaves a lasting impression.
+          At Byte & Dine, we believe food is more than sustenance — it’s emotion, memory, and storytelling.
+          Our chefs craft dishes that awaken senses, blending global influences with local ingredients in a dance of texture and aroma.
+          This is not just a meal. It's a moment you’ll remember long after the last bite.
         </p>
         <button 
           className="custom__button" 
@@ -29,7 +28,7 @@ const Header = () => {
 
       {/* Right: Image */}
       <div className="app__wrapper_img">
-        <img src={images.welcome} alt="Welcome to our restaurant" />
+        <img src={images.food} alt="Welcome to our restaurant" />
       </div>
 
       {/* Modal / Popup */}
@@ -37,18 +36,18 @@ const Header = () => {
         <div className="modal_overlay" onClick={() => setShowMenuModal(false)}>
           <div className="modal_content" onClick={(e) => e.stopPropagation()}>
             <button className="modal_close" onClick={() => setShowMenuModal(false)}>✕</button>
-            <h2>Today's Specials</h2>
+            <h2>This Week’s Culinary Journey</h2>
             <p>
-              Dive into our carefully curated menu featuring:
+              Indulge in flavors inspired by seasons and stories:
             </p>
             <ul className="modal_list">
-              <li><strong>Signature Dish:</strong> Truffle-infused Filet Mignon</li>
-              <li><strong>Seafood:</strong> Grilled Lobster Tail with Lemon Butter</li>
-              <li><strong>Dessert:</strong> Chocolate Lava Cake with Vanilla Bean Ice Cream</li>
-              <li><strong>Beverage:</strong> House-made Lavender Lemonade</li>
+              <li><strong>Epicurean Delight:</strong> Duck Confit with Orange Glaze</li>
+              <li><strong>Sea Whisper:</strong> Pan-Seared Scallops with Citrus Foam</li>
+              <li><strong>Earth Harvest:</strong> Wild Mushroom Risotto with Truffle Oil</li>
+              <li><strong>Sweet Reverie:</strong> Matcha Tiramisu with Raspberry Coulis</li>
             </ul>
             <p>
-              Each item is handcrafted using fresh, locally-sourced ingredients and prepared with passion by our award-winning chefs.
+              Each dish is plated with precision and served with soul — a harmony of taste, texture, and elegance.
             </p>
             <button className="custom__button modal_button">View Full Menu</button>
           </div>

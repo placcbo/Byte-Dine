@@ -30,7 +30,7 @@ const Laurels = () => {
 
       {/* Image Section */}
       <div className="app__wrapper_img">
-        <img src={images.laurels} alt="Laurels" />
+        <img src={images.dining} alt="Laurels" />
       </div>
     </div>
   );

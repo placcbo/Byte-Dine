@@ -13,29 +13,31 @@ const Chef = () => {
 
       {/* Text Content Section */}
       <div className="app__wrapper_info">
-        <SubHeading title="Chef's Word" />
-        <h1 className="headtext__cormorant">What We Believe In</h1>
+        <SubHeading title="The Heart Behind the Heat" />
+        <h1 className="headtext__cormorant">A Culinary Philosophy</h1>
 
         {/* Quote & Description */}
         <div className="app__chef-content">
           <div className="app__chef-content_quote">
             <img src={images.quote} alt="Quote Icon" />
             <p className="p__opensans">
-              "A great dish doesn’t just feed the body—it tells a story, stirs the soul, and lingers long after the last bite." 
-              <br /><br />— Chef Laurent B.
+              “Cooking is not just about ingredients or technique — it's about memory, emotion, and the hands that shape every plate.” 
+              <br /><br />— Chef Kevin Ndirangu
             </p>
           </div>
 
           <p className="p__opensans">
-            At Byte & Dine, we believe in crafting dishes that not only satisfy hunger but elevate the dining experience. Every meal is a labor of love, rooted in tradition and inspired by innovation.
+            At Byte & Dine, we believe food should be more than nourishment — it should be an experience.
+            Every dish is a canvas. Every flavor, a brushstroke. We cook not just for the palate, but for the heart.
+            Our kitchen breathes tradition, dances with innovation, and thrives on passion.
           </p>
         </div>
 
         {/* Chef Signature */}
         <div className="app__chef-sign">
-          <p>Kevin Luo</p>
-          <p className="p__opensans">Chef & Founder</p>
-          <img src={images.sign} alt="Signature" />
+          <p>Kevin Ndirangu</p>
+          <p className="p__opensans">Executive Chef & Founder</p>
+          
         </div>
       </div>
     </div>

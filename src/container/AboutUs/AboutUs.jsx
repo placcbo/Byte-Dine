@@ -58,7 +58,7 @@ const AboutUs = () => {
             <blockquote className="aboutus_quote">
               “Cooking is not just about feeding people — it's about making them feel at home.”
             </blockquote>
-            <p className="aboutus_author">— Chef Kevin Luo</p>
+            <p className="aboutus_author">— Chef Kevin Ndirangu</p>
           </div>
         </div>
 

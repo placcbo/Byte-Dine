@@ -1,86 +1,163 @@
-.app__aboutus {
-    position: relative;
-   
+// Base Variables
+$primary-color: #DCCA87;
+$bg-color: #0e0e0e;
+$text-color: #fff;
+$font-main: 'Open Sans', sans-serif;
+$font-heading: 'Cormorant', serif;
 
-    .app__aboutus-overlay {
-        position: absolute;
-        inset: 0; // Fixed invalid value for inset
+// About Us Section
+.aboutus {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: 1fr;
+      text-align: center;
     }
+  }
 
-    .app__aboutus-overlay img {
-        width: 391px;
-        height: 415px;
-        z-index: 0;
+  // Title
+  &_title {
+    font-family: $font-heading;
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  // Spoon image
+  &_spoon {
+    width: 30px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  // Description
+  &_description {
+    font-family: $font-main;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  // Quote Card
+  &_quote-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
     }
+  }
 
-    .app__aboutus-content {
-        width: 100%;
-        z-index: 2;
-        display: flex; // Added to ensure flex children work as intended
+  // Blockquote / Quote Text
+  &_quote {
+    font-family: $font-heading;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #eee;
+    margin-bottom: 1rem;
+  }
+
+  // Author of the quote
+  &_author {
+    font-family: $font-main;
+    font-size: 0.95rem;
+    color: $primary-color;
+  }
+
+  // Buttons
+  .btn_primary {
+    padding: 0.7rem 1.5rem;
+    background-color: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #000;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(220, 204, 135, 0.4);
     }
+  }
+}
 
-    .app__aboutus-content_about {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-end;
-        text-align: right;
-    }
+// Modal Overlay
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
 
-    .app__aboutus-content_knife {
-        margin: 2rem 4rem;
-    }
+// Modal Content Box
+.modal_content {
+  background-color: #1a1a1a;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  color: #fff;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 
-    .app__aboutus-content_knife img {
-        height: 910px;
-    }
+  h2 {
+    font-family: $font-heading;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
 
-    .app__aboutus-content_history {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        text-align: left;
-    }
+  p {
+    font-family: $font-main;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+}
 
-    .app__aboutus-content_history p,
-    .app__aboutus-content_about p {
-        margin: 2rem 0;
-        color: var(--color-grey);
-    }
+// Close Button
+.modal_close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
 
-    @media screen and (max-width: 2000px) {
-        .app__aboutus-content_knife img {
-            height: 1100px;
-        }
-
-        .app__aboutus-content_history p,
-        .app__aboutus-content_about p {
-            margin: 4rem 0;
-        }
-    }
-
-    @media screen and (max-width: 900px) {
-        .app__aboutus-content {
-            flex-direction: column;
-        }
-
-        .app__aboutus-content_knife {
-            margin: 4rem 0;
-        }
-    }
-
-    @media screen and (max-width: 650px) {
-        .app__aboutus-overlay img {
-            width: 80%;
-            height: 320px;
-        }
-        .app__aboutus-content_knife img {
-            height: 700px;
-        }
-
-       
-    }
+  &:hover {
+    color: #fff;
+  }
 }

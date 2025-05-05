@@ -1,12 +1,112 @@
-.app__footer{
-    width: 100%;
+.app__footer {
+    background-color: #111;
+    color: #fff;
     position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    background: var(--color-black);
-    padding-top: 0;
-
-}
+    overflow-x: hidden;
+    overflow-y: hidden;
+  
+    .spoon__img {
+      width: 30px;
+      height: auto;
+    }
+  
+    h2.app__footer-headtext {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+  
+    p.p__opensans {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+  
+    &-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3rem;
+  
+      &_contact,
+      &_logo,
+      &_work {
+        flex: 1 1 30%;
+        min-width: 250px;
+      }
+  
+      &_logo {
+        text-align: center;
+        flex: 1 1 40%;
+        max-width: 400px;
+  
+        h1.app__footer-brand {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          color: #fff;
+        }
+  
+        p {
+          text-align: center;
+          color: #aaa;
+        }
+  
+        .spoon__img {
+          margin: 1rem auto;
+          display: block;
+        }
+  
+        &_icons {
+          display: flex;
+          justify-content: center;
+          gap: 1.5rem;
+          margin-top: 1rem;
+  
+          a {
+            color: #fff;
+            font-size: 1.5rem;
+            transition: color 0.3s ease-in-out;
+  
+            &:hover {
+              color: #f06548; // Replace with brand color
+            }
+          }
+        }
+      }
+  
+      &_work {
+        p {
+          margin: 0.3rem 0;
+        }
+      }
+    }
+  
+    .footer__copyright {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+  
+      p {
+        color: #999;
+        font-size: 0.9rem;
+      }
+    }
+  
+    @media screen and (max-width: 768px) {
+      .app__footer-links {
+        flex-direction: column;
+        align-items: center;
+  
+        &_contact,
+        &_logo,
+        &_work {
+          text-align: center;
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }

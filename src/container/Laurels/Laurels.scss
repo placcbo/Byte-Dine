@@ -1,54 +1,81 @@
-.app__laurels_awards{
+.app__wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
-    flex-wrap: wrap;
-}
-
-.app__laurels_awards-card{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-width:230px;
+    gap: 5rem;
   
-}
-
-.app__laurels_awards-card img{
- width:50px;
- height: 50px;
-
-
-
-
-}
-
-.app__laurels_awards-card_content{
-    display: flex;
-    flex-direction: column;
-    margin-left: 1rem;
-
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+      text-align: center;
+    }
   
-}
-
-
-
-@media screen and (min-width:1900px) {
-    .app__laurels_awards-card{
-        min-width: 390px;
+    &_info {
+      flex: 1;
+      max-width: 600px;
     }
-    
-    
-}
-
-
-@media screen and (max-width:450px) {
-    .app__laurels_awards-card{
-        min-width: 100%;
-        margin: 1rem 0;
+  
+    &_img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
     }
-    
-    
-}
-
+  
+    .headtext__cormorant {
+      font-family: 'Cormorant', serif;
+      font-size: 2.5rem;
+      color: #fff;
+      margin-top: 1rem;
+    }
+  
+    .p__cormorant {
+      font-family: 'Cormorant', serif;
+      font-size: 1rem;
+      color: #ccc;
+    }
+  
+    .app__laurels_awards {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 2rem;
+  
+      @media screen and (max-width: 768px) {
+        align-items: center;
+      }
+  
+      &_card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        background-color: rgba(255, 255, 255, 0.05);
+        padding: 1rem;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out, background-color 0.3s;
+  
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+          transform: translateX(5px);
+        }
+  
+        img {
+          width: 60px;
+          height: 60px;
+          object-fit: cover;
+          border-radius: 8px;
+        }
+  
+        &_content {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }

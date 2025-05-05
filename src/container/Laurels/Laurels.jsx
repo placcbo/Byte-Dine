@@ -1,40 +1,39 @@
-import React from 'react'
-import { images,data } from '../../constants'
-import { SubHeading,MenuItem } from '../../components'  
-import "./Laurels.scss"
-
+import React from 'react';
+import { images, data } from '../../constants';
+import { SubHeading, MenuItem } from '../../components';
+import './Laurels.scss';
 
 const Laurels = () => {
-
-  const AwardCard = ({award: {imgUrl,title,subtitle}}) => (
+  const AwardCard = ({ award: { imgUrl, title, subtitle } }) => (
     <div className="app__laurels_awards-card">
-      <img src= {imgUrl} alt = "award"/>
+      <img src={imgUrl} alt="award" />
       <div className="app__laurels_awards-card_content">
-        <p className="p__cormorant" style={{color:"DCC87"}}>{title}</p>
-        <p className="p__cormorant" >{subtitle}</p>
+        <p className="p__cormorant" style={{ color: '#DCCA87' }}>{title}</p>
+        <p className="p__cormorant">{subtitle}</p>
       </div>
-
     </div>
-  )
+  );
+
   return (
-    <div className='app__bg app__wrapper section__padding' id = "awards">
+    <div className="app__bg app__wrapper section__padding" id="awards">
+      {/* Text & Awards Section */}
       <div className="app__wrapper_info">
-        <SubHeading title = "Awards & Recognitions"/>
+        <SubHeading title="Awards & Recognitions" />
         <h1 className="headtext__cormorant">Our Laurels</h1>
+
         <div className="app__laurels_awards">
-          {data.awards.map(award => <AwardCard award = {award} key = {award.title} /> )}
+          {data.awards.map((award) => (
+            <AwardCard award={award} key={award.title} />
+          ))}
         </div>
-
       </div>
 
+      {/* Image Section */}
       <div className="app__wrapper_img">
-        <img src={images.laurels} alt="laurels" />
-
+        <img src={images.laurels} alt="Laurels" />
       </div>
-
-      
     </div>
-  )
-}
+  );
+};
 
-export default Laurels
+export default Laurels;

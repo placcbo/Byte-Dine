@@ -1,48 +1,57 @@
-import React, { useState } from 'react'
-import "./Intro.scss"
-import { images } from '../../constants'
-import {BsFillPlayFill, BsPauseFill} from 'react-icons/bs'
-import { meal } from '../../constants'
-
-
+import React, { useState, useRef, useEffect } from 'react';
+import "./Intro.scss";
+import { meal } from '../../constants';
+import { BsFillPlayFill, BsPauseFill } from 'react-icons/bs';
 
 const Intro = () => {
+  const vidRef = useRef(null);
+  const [playVideo, setPlayVideo] = useState(false);
 
-  const vidRef = React.useRef()
-  const [playVideo,setPlayVideo] = React.useState(false)
+  // Auto-play video on component mount
+  useEffect(() => {
+    if (vidRef.current) {
+      vidRef.current.play();
+      setPlayVideo(true);
+    }
+  }, []);
 
   const handleVideo = () => {
-    setPlayVideo((prevPlayVideo) => !prevPlayVideo )
+    const video = vidRef.current;
 
     if (playVideo) {
-      vidRef.current.pause()
-      
-    }   else{
-      vidRef.current.play()
+      video.pause();
+    } else {
+      video.play();
     }
-  }
+
+    setPlayVideo(!playVideo);
+  };
 
   return (
-    <div className='app__video'>
-      <video src={meal}   ref={vidRef} type = "videp/mp4"  loop controls = {false} muted />
+    <div className="app__video">
+      <video
+        ref={vidRef}
+        src={meal}
+        type="video/mp4"
+        loop
+        muted
+        playsInline
+        aria-label="Intro promotional video"
+      >
+        Your browser does not support the video tag.
+      </video>
 
-      <div className="app__video-overlay flex__center">
-        <div 
-        
-        className="app__video-overlay_circle flex__center"
-        onClick={handleVideo}
-        >
-
+      <div className="app__video-overlay flex__center" onClick={handleVideo}>
+        <div className="app__video-overlay_circle flex__center">
           {playVideo ? (
-            <BsPauseFill/>
-          ) : <BsFillPlayFill color='#fff' style={{fontSize:30}}/>}
-
-
+            <BsPauseFill color="#fff" size={30} />
+          ) : (
+            <BsFillPlayFill color="#fff" size={30} />
+          )}
         </div>
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default Intro
+export default Intro;

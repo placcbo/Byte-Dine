@@ -1,0 +1,71 @@
+.app__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  
+    @media screen and (max-width: 990px) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    @media screen and (max-width: 600px) {
+      align-items: center;
+      text-align: center;
+    }
+  
+    &_info {
+      flex: 1;
+      max-width: 600px;
+    }
+  
+    &_img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+    }
+  
+    .headtext__cormorant {
+      font-family: 'Cormorant', serif;
+      font-size: 2.5rem;
+      color: #fff;
+    }
+  
+    .p__cormorant {
+      font-family: 'Cormorant', serif;
+      font-size: 1.2rem;
+    }
+  
+    .p__opensans {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+  
+    .custom__button {
+      padding: 0.8rem 2rem;
+      background-color: #DCCA87;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+  
+      &:hover {
+        background-color: #b8a970;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(220, 204, 135, 0.4);
+      }
+    }
+  }

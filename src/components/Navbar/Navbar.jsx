@@ -21,7 +21,7 @@ const Navbar = () => {
       <nav className="app__navbar">
         {/* Logo */}
         <div className="app__navbar-logo">
-          <h1>Byte & Dine</h1>
+         <a href="#home"> <h1>Byte & Dine</h1></a>
         </div>
 
         {/* Desktop Menu */}
